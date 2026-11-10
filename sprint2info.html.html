@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information Modules | AI in Sports</title>
+  
+  <!-- Materialize CSS & Google Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Custom styling overrides for dark theme accents */
+    body {
+      background-color: #0b0e14;
+      color: #e0e6ed;
+      font-family: 'Rajdhani', sans-serif;
+    }
+    h1, h2, h3, .brand-logo {
+      font-family: 'Orbitron', sans-serif;
+    }
+    .nav-wrapper, .page-footer {
+      background-color: #121824 !important;
+    }
+    .card {
+      background-color: #161f2e !important;
+      color: #ffffff;
+    }
+    /* Sticky category wrapper for scrollspy */
+    .sticky-nav {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 997;
+      background: #121824;
+      border-bottom: 1px solid #00f0ff;
+    }
+    .sticky-nav a {
+      color: #00f0ff;
+      padding: 10px 15px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MATERIALIZE COMPONENT: Navbar & Mobile Sidenav -->
+  <header>
+    <div class="navbar-fixed">
+      <nav class="nav-wrapper">
+        <div class="container">
+          <a href="home.html" class="brand-logo cyan-text text-accent-2">
+            <i class="material-icons left">bolt</i>AI IN SPORTS
+          </a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="home.html">Home</a></li>
+            <li class="active"><a href="info.html">Information</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    
+    <!-- Mobile Sidenav Structure -->
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="home.html">Home</a></li>
+      <li class="active"><a href="info.html">Information</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- MATERIALIZE JS FEATURE (REQUIRED): Image Slider / Slideshow (4 Images) -->
+  <section class="slider">
+    <ul class="slides">
+      <li>
+        <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80" alt="Soccer Analytics">
+        <div class="caption center-align">
+          <h3>Computer Vision in Soccer</h3>
+          <h5 class="light grey-text text-lighten-3">Mapping player tracking and pressing efficiency in real time.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=80" alt="Basketball AI">
+        <div class="caption left-align">
+          <h3>Spatial Basketball Analytics</h3>
+          <h5 class="light grey-text text-lighten-3">Sub-second shot trajectory calculation and defensive metrics.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1562077772-3bd90403f7f0?auto=format&fit=crop&w=1200&q=80" alt="Baseball Sabermetrics">
+        <div class="caption right-align">
+          <h3>Sabermetrics 2.0</h3>
+          <h5 class="light grey-text text-lighten-3">Predictive pitch modeling and swing mechanics optimization.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=1200&q=80" alt="Golf Swing AI">
+        <div class="caption center-align">
+          <h3>Precision Golf Tech</h3>
+          <h5 class="light grey-text text-lighten-3">Generative AI club face design and automated swing analyzers.</h5>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- MATERIALIZE JS FEATURE (UNCOVERED): Scrollspy Navigation Bar -->
+  <div class="sticky-nav center-align">
+    <a href="#overview">Overview</a>
+    <a href="#soccer">Soccer</a>
+    <a href="#basketball">Basketball</a>
+    <a href="#baseball">Baseball</a>
+    <a href="#football">Football</a>
+    <a href="#golf">Golf</a>
+    <a href="#metrics">Metrics Table</a>
+  </div>
+
+  <main class="container" style="margin-top: 2rem;">
+
+    <!-- MATERIALIZE CSS FEATURE (UNCOVERED): Shadow Helper (z-depth-3) & Card Component -->
+    <!-- SECTION 1: OVERVIEW -->
+    <section id="overview" class="section scrollspy">
+      <div class="card z-depth-3">
+        <div class="card-content">
+          <span class="card-title cyan-text text-accent-2">
+            🌐 General AI Applications
+            <!-- MATERIALIZE COMPONENT (UNCOVERED): Badge -->
+            <span class="badge new cyan black-text" data-badge-caption="Overview"></span>
+          </span>
+          <p>AI provides athletes and coaches with deeper insights into individual performance, as well as team and opponent dynamics. Advanced models analyze player performance factors like speed, gait patterns, and endurance to generate tailored suggestions for improvement. AI creates hyper-personalized training plans that aid injury prevention and enhance nutrition. Platforms like <a href="https://www.forbes.com/sites/kathleenwalch/2024/08/16/how-ai-is-revolutionizing-professional-sports/" target="_blank" class="cyan-text">Zone7</a>—adopted by clubs like Sevilla FC, Rangers FC, and LAFC—analyze biometric, GPS, and workload data to recommend rest, claiming to reduce non-contact injuries by up to 50%.</p>
+          <br>
+          <p>System models deliver game strategy recommendations by processing game footage and metrics to reveal hidden patterns. Acting as an augmented intelligence tool, real-time AI evaluates ongoing games to help coaches make tactical adjustments during play. To dive deeper into general sports technologies, check out the <a href="https://wsc-sports.com/blog/industry-insights/ai-sports-revolution-12-innovations-changing-everything/" target="_blank" class="cyan-text">WSC Sports Innovations Overview</a> or explore <a href="https://www.globant.com/tech-terms/ai-in-sports" target="_blank" class="cyan-text">Globant's Tech Terms for AI in Sports</a>.</p>
+        </div>
+        <div class="card-action">
+          <a href="https://youtu.be/OKu0yybmtkc?si=juxe4spJsdRUGAyu" target="_blank" class="btn waves-effect waves-light cyan black-text"><i class="material-icons left">play_arrow</i>Watch Video</a>
+          <a href="https://www.mygreatlearning.com/blog/tracking-player-performance-with-ai/" target="_blank" class="btn waves-effect waves-light green accent-4"><i class="material-icons left">link</i>Read Tracking Study</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: SOCCER -->
+    <section id="soccer" class="section scrollspy">
+      <div class="card z-depth-3">
+        <div class="card-content">
+          <span class="card-title purple-text text-accent-2">⚽ Soccer & Fútbol Innovation</span>
+          <div class="row">
+            <!-- MATERIALIZE COMPONENT: Media Helper (video-container) -->
+            <div class="col s12 m6">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/y1gkrUc0Ghw" title="AI in Soccer" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <p>Data science and computer vision are redefining soccer performance. High-definition optical tracking cameras map every player on the pitch, evaluating tactical positioning, pressing efficiency, and passing networks in real time. AI models generate automated event logging, enabling tactical analysis across match scenarios.</p>
+              <p>Leading research hubs, such as the <a href="https://barcainnovationhub.fcbarcelona.com/blog/ai-computer-vision-football-analytics/" target="_blank" class="purple-text text-accent-2">Barça Innovation Hub</a>, explore computer vision algorithms to evaluate risks and rewards associated with player workloads. Modern academies utilize <a href="https://tezeract.ai/ai-in-soccer-training/" target="_blank" class="purple-text text-accent-2">Tezeract AI training tools</a> and data-driven drills to accelerate youth development.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-action">
+          <a href="https://soccerinteraction.academy/en/soccer-academy-blog/how-data-science-and-ai-are-redefining-soccer-performance" target="_blank" class="btn waves-effect waves-light purple accent-3">Soccer Data Science Insights</a>
+          <a href="https://youtu.be/C164kYMGV1A?si=Sd-4dAOnBkeQQNMP" target="_blank" class="btn waves-effect waves-light green accent-4"><i class="material-icons left">play_arrow</i>Fútbol Breakdown</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: BASKETBALL -->
+    <section id="basketball" class="section scrollspy">
+      <div class="card z-depth-3">
+        <div class="card-content">
+          <span class="card-title pink-text text-accent-2">🏀 Basketball & NBA Insights</span>
+          <div class="row">
+            <div class="col s12 m6 pull-m6">
+              <p>Basketball has embraced spatial data tracking. Intelligent cameras monitor shot trajectories, player velocities, and defensive spacing at sub-second intervals. The NBA's partnership with cloud infrastructure powers next-generation insights, helping teams calculate shot probabilities dynamically.</p>
+              <p>Coaches use AI tools to simulate lineup combinations against specific opponent defenses. To read more on how machine learning shapes court strategies, see <a href="https://deconch30.medium.com/ai-is-shaping-the-future-of-professional-basketball-5293415813d2" target="_blank" class="pink-text text-accent-2">AI in Professional Basketball</a> and <a href="https://www.washingtonpost.com/creativegroup/aws/inside-the-ai-engine-powering-the-nbas-next-generation-of-insights/" target="_blank" class="pink-text text-accent-2">AWS & The NBA's AI Engine</a>.</p>
+            </div>
+            <!-- MATERIALIZE COMPONENT: Responsive Image Class -->
+            <div class="col s12 m6 push-m6">
+              <img src="basketball.png" alt="Basketball Analytics" class="responsive-img materialboxed" onerror="this.onerror=null; this.src='basketball.jpg';">
+            </div>
+          </div>
+        </div>
+        <div class="card-action">
+          <a href="https://youtu.be/DCu9xawHJaw?si=zp2B7Y0O-x8SS515" target="_blank" class="btn waves-effect waves-light pink accent-3"><i class="material-icons left">play_arrow</i>NBA AI Deep Dive</a>
+          <a href="https://youtu.be/a7Cx8DRWCp4?si=nQakglPbeT2M2XW9" target="_blank" class="btn waves-effect waves-light green accent-4"><i class="material-icons left">play_arrow</i>Next-Gen Court Insights</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: BASEBALL -->
+    <section id="baseball" class="section scrollspy">
+      <div class="card z-depth-3">
+        <div class="card-content">
+          <span class="card-title cyan-text text-accent-2">⚾ Baseball & Sabermetrics 2.0</span>
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/zjzrJE12rAw" title="AI in Baseball" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <p>Modern baseball leverages automated tracking systems to evaluate pitch spins, bat speeds, and launch angles. Machine learning models predict pitch selection based on situational history, pitcher fatigue, and batter tendencies.</p>
+              <p>By transforming raw Statcast data into actionable training feedback, players optimize swing mechanics to reduce injury risks and boost performance. Read the latest analysis at <a href="https://athletech.co/baseball-ai/" target="_blank" class="cyan-text">Athletech Baseball AI</a> and the <a href="https://sabr.org/journal/article/artificial-intelligence-machine-learning-and-the-bright-future-of-baseball/" target="_blank" class="cyan-text">SABR Journal on AI & Machine Learning</a>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-action">
+          <a href="https://youtu.be/8D-je9kFse0?si=t8wUUZ5_Un0o0usp" target="_blank" class="btn waves-effect waves-light cyan black-text"><i class="material-icons left">play_arrow</i>ML in Baseball</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FOOTBALL -->
+    <section id="football" class="section scrollspy">
+      <div class="card z-depth-3">
+        <div class="card-content">
+          <span class="card-title purple-text text-accent-2">🏈 Gridiron Football & NFL Tech</span>
+          <div class="row">
+            <div class="col s12 m6 pull-m6">
+              <p>Machine learning models process NFL Next Gen Stats to analyze player speed, separation distance between receivers and defensive backs, and offensive line protection metrics. These metrics assist teams with game preparation and player recovery routines.</p>
+              <p>Strategic modeling helps play-callers determine fourth-down probability conversions and win expectations in real time. Learn more by reviewing <a href="https://www.virtasant.com/ai-today/ai-in-sports-nfl" target="_blank" class="purple-text text-accent-2">Virtasant's NFL AI Overview</a> and research on <a href="https://ui.adsabs.harvard.edu/abs/2020arXiv201109192T/abstract" target="_blank" class="purple-text text-accent-2">Player Trajectory Modeling</a>.</p>
+            </div>
+            <div class="col s12 m6 push-m6">
+              <img src="football.png" alt="Gridiron Football AI" class="responsive-img materialboxed">
+            </div>
+          </div>
+        </div>
+        <div class="card-action">
+          <a href="https://youtu.be/DnXQKocL86Y?si=6Cuj05E70Mrlx4jZ" target="_blank" class="btn waves-effect waves-light purple accent-3"><i class="material-icons left">play_arrow</i>NFL Next Gen Stats</a>
+          <a href="https://youtu.be/D-EK7CO0oFo?si=GPggEuPFsKDjF33B" target="_blank" class="btn waves-effect waves-light green accent-4"><i class="material-icons left">play_arrow</i>Gridiron Tech Breakdown</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: GOLF -->
+    <section id="golf" class="section scrollspy">
+      <div class="card z-depth-3">
+        <div class="card-content">
+          <span class="card-title pink-text text-accent-2">⛳ Golf Precision & Swing Mechanics</span>
+          <div class="row">
+            <div class="col s12 m6">
+              <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Cu9AmBNQsyo" title="AI in Golf" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col s12 m6">
+              <p>Golf technology incorporates smart launch monitors and AI swing analyzers. Computer vision algorithms compare an amateur's mechanics against elite tour players to provide real-time adjustments.</p>
+              <p>Equipment manufacturers use generative AI to design club faces that maximize ball speed and forgiveness on off-center hits. Read detailed studies from the <a href="https://collegeofgolf.keiseruniversity.edu/the-influence-of-artificial-intelligence-in-the-golf-industry/" target="_blank" class="pink-text text-accent-2">Keiser University College of Golf</a> and the <a href="https://www.pga.info/discover/latest/news/how-artificial-intelligence-could-change-golf-industry/" target="_blank" class="pink-text text-accent-2">PGA Insights Report</a>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-action">
+          <a href="https://youtu.be/nHbnVsCKKgs?si=Szlu1VEahB25YHhD" target="_blank" class="btn waves-effect waves-light pink accent-3"><i class="material-icons left">play_arrow</i>Smart Golf Swing Systems</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MATERIALIZE CSS FEATURE (UNCOVERED): Responsive Striped Table -->
+    <section id="metrics" class="section scrollspy">
+      <div class="card z-depth-3">
+        <div class="card-content">
+          <span class="card-title cyan-text text-accent-2">📊 AI Sports Metrics Comparison</span>
+          <table class="striped responsive-table">
+            <thead>
+              <tr>
+                <th>Sport Domain</th>
+                <th>Primary AI Technology</th>
+                <th>Key Metric Tracked</th>
+                <th>Primary Benefit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Soccer</td>
+                <td>Computer Vision / Optical Cameras</td>
+                <td>Pressing Efficiency & Distance</td>
+                <td>Injury Reduction (up to 50%)</td>
+              </tr>
+              <tr>
+                <td>Basketball</td>
+                <td>Spatial Trajectory Tracking</td>
+                <td>Shot Dynamics & Defensive Spacing</td>
+                <td>Real-time Lineup Simulation</td>
+              </tr>
+              <tr>
+                <td>Baseball</td>
+                <td>Statcast Machine Learning</td>
+                <td>Spin Rate & Launch Angle</td>
+                <td>Swing Mechanic Optimization</td>
+              </tr>
+              <tr>
+                <td>Football</td>
+                <td>Telemetry Sensors & AWS ML</td>
+                <td>Receiver Separation & Speed</td>
+                <td>4th Down Win Probability</td>
+              </tr>
+              <tr>
+                <td>Golf</td>
+                <td>Generative AI Design & Launch Monitors</td>
+                <td>Ball Speed & Clubface COR</td>
+                <td>Forgiveness & Swing Correction</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MATERIALIZE COMPONENT (UNCOVERED): Floating Action Button (FAB) -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large cyan">
+      <i class="large material-icons">navigation</i>
+    </a>
+    <ul>
+      <li><a href="#overview" class="btn-floating red"><i class="material-icons">public</i></a></li>
+      <li><a href="#soccer" class="btn-floating green"><i class="material-icons">sports_soccer</i></a></li>
+      <li><a href="#basketball" class="btn-floating orange"><i class="material-icons">sports_basketball</i></a></li>
+      <li><a href="#metrics" class="btn-floating blue"><i class="material-icons">table_chart</i></a></li>
+    </ul>
+  </div>
+
+  <!-- MATERIALIZE COMPONENT: Page Footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">AI in Sports Research</h5>
+          <p class="grey-text text-lighten-4">Exploring machine learning, spatial data, and telemetry across athletic domains.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Quick Navigation</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="home.html">Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="info.html">Information</a></li>
+            <li><a class="grey-text text-lighten-3" href="faqs.html">FAQs</a></li>
+            <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
+            <li><a class="grey-text text-lighten-3" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; 2026 AI in Sports Research Lab | Miami University, Oxford, OH
+      </div>
+    </div>
+  </footer>
+
+  <!-- Materialize JavaScript CDN & Auto-Init -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Auto-initializes all Materialize components (Sidenav, Slider, Scrollspy, FAB, Materialbox)
+      M.AutoInit();
+    });
+  </script>
+</body>
+</html>
