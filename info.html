@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Modules | AI in Sports</title>
+
+    <!-- Materialize CSS & Google Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Prevent Materialize global resets from overriding header and navigation styles */
+        nav,
+        header nav,
+        .category-nav {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            height: auto !important;
+            line-height: normal !important;
+        }
+
+        header nav a,
+        .category-nav a {
+            line-height: normal !important;
+            height: auto !important;
+            padding: 0 !important;
+            color: inherit;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* Custom HUD Table Styling */
+        .hud-table-wrapper {
+            overflow-x: auto;
+            margin-top: 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 240, 255, 0.25);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+        }
+
+        table.hud-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(5, 10, 20, 0.75);
+            color: #e0e6ed;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        table.hud-table th {
+            background: rgba(0, 240, 255, 0.12);
+            color: var(--neon-cyan, #00f0ff);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 1.1rem 1rem;
+            border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+        }
+
+        table.hud-table td {
+            padding: 1rem;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        table.hud-table tbody tr:hover {
+            background: rgba(0, 240, 255, 0.08);
+        }
+
+        /* Section Spacing & Card Adjustments */
+        .section.scrollspy {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .glass-card p {
+            line-height: 1.6;
+        }
+
+        /* Scroll to Top Button Styling */
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(10, 15, 30, 0.85);
+            border: 1px solid var(--neon-cyan, #00f0ff);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-to-top-btn:hover {
+            background: var(--neon-cyan, #00f0ff);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+            transform: translateY(-3px);
+        }
+
+        .scroll-to-top-btn svg {
+            stroke: var(--neon-cyan, #00f0ff);
+            transition: stroke 0.3s ease;
+        }
+
+        .scroll-to-top-btn:hover svg {
+            stroke: #050a14;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- Cyber Grid Background Layer -->
+    <div class="cyber-grid"></div>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="index.html" class="brand-logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="var(--neon-cyan)" stroke-width="1.5" />
+                <path d="M12 2v20M2 12h20" stroke="rgba(0, 240, 255, 0.3)" stroke-width="1" />
+                <polygon points="13,3 7,13 12,13 11,21 17,11 12,11" fill="var(--neon-green)" />
+            </svg>
+            AI <span>IN SPORTS</span>
+        </a>
+        <nav aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="info.html" class="active">Information</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Sticky Category Jump Navigation -->
+    <div class="sticky-wrapper">
+        <nav class="category-nav">
+            <a href="#overview">Overview</a>
+            <a href="#soccer">Soccer</a>
+            <a href="#basketball">Basketball</a>
+            <a href="#baseball">Baseball</a>
+            <a href="#football">Football</a>
+            <a href="#golf">Golf</a>
+            <a href="#metrics">Metrics Table</a>
+        </nav>
+    </div>
+
+    <!-- Page Banner Hero Card -->
+    <section class="container" style="padding-bottom: 0;">
+        <div class="glass-card hero-container glow-cyan" style="text-align: center;">
+            <h1>Information Modules</h1>
+            <p style="color: var(--text-muted); max-width: 750px; margin: 0 auto;">
+                Explore deep dives into specific sports disciplines, computer vision telemetry, sabermetrics, and predictive AI analytics.
+            </p>
+        </div>
+    </section>
+
+    <main class="container" style="margin-top: 1rem;">
+
+        <!-- SECTION 1: OVERVIEW -->
+        <section id="overview" class="section scrollspy">
+            <div class="glass-card glow-cyan">
+                <h3 style="color: var(--neon-cyan); margin-bottom: 1rem;">🌐 General AI Applications</h3>
+                <p>AI provides athletes and coaches with deeper insights into individual performance, as well as team and opponent dynamics. Advanced models analyze player performance factors like speed, gait patterns, and endurance to generate tailored suggestions for improvement. AI creates hyper-personalized training plans that aid injury prevention and enhance nutrition. Platforms like <a href="https://www.forbes.com/sites/kathleenwalch/2024/08/16/how-ai-is-revolutionizing-professional-sports/" target="_blank" style="color: var(--neon-cyan); font-weight: 600;">Zone7</a>—adopted by clubs like Sevilla FC, Rangers FC, and LAFC—analyze biometric, GPS, and workload data to recommend rest, claiming to reduce non-contact injuries by up to 50%.</p>
+                <p style="margin-top: 0.75rem;">System models deliver game strategy recommendations by processing game footage and metrics to reveal hidden patterns. Acting as an augmented intelligence tool, real-time AI evaluates ongoing games to help coaches make tactical adjustments during play. To dive deeper into general sports technologies, check out the <a href="https://wsc-sports.com/blog/industry-insights/ai-sports-revolution-12-innovations-changing-everything/" target="_blank" style="color: var(--neon-cyan); font-weight: 600;">WSC Sports Innovations Overview</a> or explore <a href="https://www.globant.com/tech-terms/ai-in-sports" target="_blank" style="color: var(--neon-cyan); font-weight: 600;">Globant's Tech Terms for AI in Sports</a>.</p>
+
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                    <a href="https://youtu.be/OKu0yybmtkc?si=juxe4spJsdRUGAyu" target="_blank" class="btn-hud"><i class="material-icons left" style="vertical-align: middle; margin-right: 4px;">play_arrow</i>Watch Video</a>
+                    <a href="https://www.mygreatlearning.com/blog/tracking-player-performance-with-ai/" target="_blank" class="btn-hud btn-green"><i class="material-icons left" style="vertical-align: middle; margin-right: 4px;">link</i>Read Tracking Study</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SOCCER -->
+        <section id="soccer" class="section scrollspy">
+            <div class="glass-card glow-purple">
+                <h3 style="color: var(--neon-purple); margin-bottom: 1rem;">⚽ Soccer & Fútbol Innovation</h3>
+                <div class="row" style="margin-bottom: 0;">
+                    <div class="col s12 m6">
+                        <div class="video-container" style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(176, 0, 255, 0.3);">
+                            <iframe src="https://www.youtube.com/embed/y1gkrUc0Ghw" title="AI in Soccer" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <p>Data science and computer vision are redefining soccer performance. High-definition optical tracking cameras map every player on the pitch, evaluating tactical positioning, pressing efficiency, and passing networks in real time. AI models generate automated event logging, enabling tactical analysis across match scenarios.</p>
+                        <p style="margin-top: 0.75rem;">Leading research hubs, such as the <a href="https://barcainnovationhub.fcbarcelona.com/blog/ai-computer-vision-football-analytics/" target="_blank" style="color: var(--neon-purple); font-weight: 600;">Barça Innovation Hub</a>, explore computer vision algorithms to evaluate risks and rewards associated with player workloads. Modern academies utilize <a href="https://tezeract.ai/ai-in-soccer-training/" target="_blank" style="color: var(--neon-purple); font-weight: 600;">Tezeract AI training tools</a> and data-driven drills to accelerate youth development.</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                    <a href="https://soccerinteraction.academy/en/soccer-academy-blog/how-data-science-and-ai-are-redefining-soccer-performance" target="_blank" class="btn-hud" style="border-color: var(--neon-purple); color: var(--neon-purple);">Soccer Data Science Insights</a>
+                    <a href="https://youtu.be/C164kYMGV1A?si=Sd-4dAOnBkeQQNMP" target="_blank" class="btn-hud btn-green"><i class="material-icons left" style="vertical-align: middle; margin-right: 4px;">play_arrow</i>Fútbol Breakdown</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: BASKETBALL -->
+        <section id="basketball" class="section scrollspy">
+            <div class="glass-card glow-pink">
+                <h3 style="color: var(--neon-pink); margin-bottom: 1rem;">🏀 Basketball & NBA Insights</h3>
+                <div class="row" style="margin-bottom: 0;">
+                    <div class="col s12 m6">
+                        <p>Basketball has embraced spatial data tracking. Intelligent cameras monitor shot trajectories, player velocities, and defensive spacing at sub-second intervals. The NBA's partnership with cloud infrastructure powers next-generation insights, helping teams calculate shot probabilities dynamically.</p>
+                        <p style="margin-top: 0.75rem;">Coaches use AI tools to simulate lineup combinations against specific opponent defenses. To read more on how machine learning shapes court strategies, see <a href="https://deconch30.medium.com/ai-is-shaping-the-future-of-professional-basketball-5293415813d2" target="_blank" style="color: var(--neon-pink); font-weight: 600;">AI in Professional Basketball</a> and <a href="https://www.washingtonpost.com/creativegroup/aws/inside-the-ai-engine-powering-the-nbas-next-generation-of-insights/" target="_blank" style="color: var(--neon-pink); font-weight: 600;">AWS & The NBA's AI Engine</a>.</p>
+                    </div>
+                    <div class="col s12 m6" style="text-align: center;">
+                        <img src="basketball.png" alt="Basketball Analytics" class="responsive-img materialboxed" style="border-radius: 8px; border: 1px solid var(--neon-pink); box-shadow: 0 0 15px rgba(255, 0, 127, 0.2);" onerror="this.onerror=null; this.src='basketball.jpg';">
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                    <a href="https://youtu.be/DCu9xawHJaw?si=zp2B7Y0O-x8SS515" target="_blank" class="btn-hud" style="border-color: var(--neon-pink); color: var(--neon-pink);"><i class="material-icons left" style="vertical-align: middle; margin-right: 4px;">play_arrow</i>NBA AI Deep Dive</a>
+                    <a href="https://youtu.be/a7Cx8DRWCp4?si=nQakglPbeT2M2XW9" target="_blank" class="btn-hud btn-green"><i class="material-icons left" style="vertical-align: middle; margin-right: 4px;">play_arrow</i>Next-Gen Court Insights</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: BASEBALL -->
+        <section id="baseball" class="section scrollspy">
+            <div class="glass-card glow-cyan">
+                <h3 style="color: var(--neon-cyan); margin-bottom: 1rem;">⚾ Baseball & Sabermetrics 2.0</h3>
+                <div class="row" style="margin-bottom: 0;">
+                    <div class="col s12 m6">
+                        <div class="video-container" style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(0, 240, 255, 0.3);">
+                            <iframe src="https://www.youtube.com/embed/zjzrJE12rAw" title="AI in Baseball" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <p>Modern baseball leverages automated tracking systems to evaluate pitch spins, bat speeds, and launch angles. Machine learning models predict pitch selection based on situational history, pitcher fatigue, and batter tendencies.</p>
+                        <p style="margin-top: 0.75rem;">By transforming raw Statcast data into actionable training feedback, players optimize swing mechanics to reduce injury risks and boost performance. Read the latest analysis at <a href="https://athletech.co/baseball-ai/" target="_blank" style="color: var(--neon-cyan); font-weight: 600;">Athletech Baseball AI</a> and the <a href="https://sabr.org/journal/article/artificial-intelligence-machine-learning-and-the-bright-future-of-baseball/" target="_blank" style="color: var(--neon-cyan); font-weight: 600;">SABR Journal on AI & Machine Learning</a>.</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                    <a href="https://youtu.be/8D-je9kFse0?si=t8wUUZ5_Un0o0usp" target="_blank" class="btn-hud"><i class="material-icons left" style="vertical-align: middle; margin-right: 4px;">play_arrow</i>ML in Baseball</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: FOOTBALL -->
+        <section id="football" class="section scrollspy">
+            <div class="glass-card glow-purple">
+                <h3 style="color: var(--neon-purple); margin-bottom: 1rem;">🏈 Gridiron Football & NFL Tech</h3>
+                <div class="row" style="margin-bottom: 0;">
+                    <div class="col s12 m6">
+                        <p>Machine learning models process NFL Next Gen Stats to analyze player speed, separation distance between receivers and defensive backs, and offensive line protection metrics. These metrics assist teams with game preparation and player recovery routines.</p>
+                        <p style="margin-top: 0.75rem;">Strategic modeling helps play-callers determine fourth-down probability conversions and win expectations in real time. Learn more by reviewing <a href="https://www.virtasant.com/ai-today/ai-in-sports-nfl" target="_blank" style="color: var(--neon-purple); font-weight: 600;">Virtasant's NFL AI Overview</a> and research on <a href="https://ui.adsabs.harvard.edu/abs/2020arXiv201109192T/abstract" target="_blank" style="color: var(--neon-purple); font-weight: 600;">Player Trajectory Modeling</a>.</p>
+                    </div>
+                    <div class="col s12 m6" style="text-align: center;">
+                        <img src="football.png" alt="Gridiron Football AI" class="responsive-img materialboxed" style="border-radius: 8px; border: 1px solid var(--neon-purple); box-shadow: 0 0 15px rgba(176, 0, 255, 0.2);">
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                    <a href="https://youtu.be/DnXQKocL86Y?si=6Cuj05E70Mrlx4jZ" target="_blank" class="btn-hud" style="border-color: var(--neon-purple); color: var(--neon-purple);"><i class="material-icons left" style="vertical-align: middle; margin-right: 4px;">play_arrow</i>NFL Next Gen Stats</a>
+                    <a href="https://youtu.be/D-EK7CO0oFo?si=GPggEuPFsKDjF33B" target="_blank" class="btn-hud btn-green"><i class="material-icons left" style="vertical-align: middle; margin-right: 4px;">play_arrow</i>Gridiron Tech Breakdown</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: GOLF -->
+        <section id="golf" class="section scrollspy">
+            <div class="glass-card glow-pink">
+                <h3 style="color: var(--neon-pink); margin-bottom: 1rem;">⛳ Golf Precision & Swing Mechanics</h3>
+                <div class="row" style="margin-bottom: 0;">
+                    <div class="col s12 m6">
+                        <div class="video-container" style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 0, 127, 0.3);">
+                            <iframe src="https://www.youtube.com/embed/Cu9AmBNQsyo" title="AI in Golf" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <p>Golf technology incorporates smart launch monitors and AI swing analyzers. Computer vision algorithms compare an amateur's mechanics against elite tour players to provide real-time adjustments.</p>
+                        <p style="margin-top: 0.75rem;">Equipment manufacturers use generative AI to design club faces that maximize ball speed and forgiveness on off-center hits. Read detailed studies from the <a href="https://collegeofgolf.keiseruniversity.edu/the-influence-of-artificial-intelligence-in-the-golf-industry/" target="_blank" style="color: var(--neon-pink); font-weight: 600;">Keiser University College of Golf</a> and the <a href="https://www.pga.info/discover/latest/news/how-artificial-intelligence-could-change-golf-industry/" target="_blank" style="color: var(--neon-pink); font-weight: 600;">PGA Insights Report</a>.</p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                    <a href="https://youtu.be/nHbnVsCKKgs?si=Szlu1VEahB25YHhD" target="_blank" class="btn-hud" style="border-color: var(--neon-pink); color: var(--neon-pink);"><i class="material-icons left" style="vertical-align: middle; margin-right: 4px;">play_arrow</i>Smart Golf Swing Systems</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: METRICS TABLE -->
+        <section id="metrics" class="section scrollspy">
+            <div class="glass-card glow-cyan">
+                <h3 style="color: var(--neon-cyan); margin-bottom: 1rem;">📊 AI Sports Metrics Comparison</h3>
+
+                <div class="hud-table-wrapper">
+                    <table class="hud-table">
+                        <thead>
+                            <tr>
+                                <th>Sport Domain</th>
+                                <th>Primary AI Technology</th>
+                                <th>Key Metric Tracked</th>
+                                <th>Primary Benefit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong style="color: var(--neon-cyan);">Soccer</strong></td>
+                                <td>Computer Vision / Optical Cameras</td>
+                                <td>Pressing Efficiency & Distance</td>
+                                <td>Injury Reduction (up to 50%)</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: var(--neon-pink);">Basketball</strong></td>
+                                <td>Spatial Trajectory Tracking</td>
+                                <td>Shot Dynamics & Defensive Spacing</td>
+                                <td>Real-time Lineup Simulation</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: var(--neon-cyan);">Baseball</strong></td>
+                                <td>Statcast Machine Learning</td>
+                                <td>Spin Rate & Launch Angle</td>
+                                <td>Swing Mechanic Optimization</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: var(--neon-purple);">Football</strong></td>
+                                <td>Telemetry Sensors & AWS ML</td>
+                                <td>Receiver Separation & Speed</td>
+                                <td>4th Down Win Probability</td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: var(--neon-pink);">Golf</strong></td>
+                                <td>Generative AI Design & Launch Monitors</td>
+                                <td>Ball Speed & Clubface COR</td>
+                                <td>Forgiveness & Swing Correction</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <a href="#top" class="scroll-to-top-btn" aria-label="Scroll to top">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
+
+    <!-- Universal Footer -->
+    <footer>
+        <p>&copy; 2026 AI in Sports Research Lab | Miami University, Oxford, OH</p>
+    </footer>
+
+    <!-- Materialize JavaScript CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var scrollspyElems = document.querySelectorAll('.scrollspy');
+            M.ScrollSpy.init(scrollspyElems, { scrollOffset: 120 });
+
+            var materialboxElems = document.querySelectorAll('.materialboxed');
+            M.Materialbox.init(materialboxElems);
+        });
+    </script>
+</body>
+
+</html>
