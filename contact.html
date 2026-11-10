@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - AI in Sports</title>
+  <!-- Material Icons & Materialize CSS CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Jake's Shared Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="blue-grey darken-4">
+      <div class="nav-wrapper container">
+        <a href="index.html" class="brand-logo">AI Sports</a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="info.html">Info</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="active"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="info.html">Info</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li class="active"><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Content: Contact Form -->
+  <main class="container" style="margin-top: 40px; margin-bottom: 60px;">
+    <div class="row">
+      <div class="col s12 m8 offset-m2">
+        <div class="card z-depth-2">
+          <div class="card-content">
+            <span class="card-title center-align">Get in Touch</span>
+            <p class="center-align grey-text text-darken-1" style="margin-bottom: 25px;">
+              Have questions or feedback about AI in modern sports? Send us a message below.
+            </p>
+
+            <!-- Formspree Submission Form -->
+            <form action="https://formspree.io/f/xoeelbae" method="POST">
+              <div class="input-field">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="name" name="name" type="text" class="validate" required>
+                <label for="name">Your Name</label>
+              </div>
+
+              <div class="input-field">
+                <i class="material-icons prefix">email</i>
+                <input id="email" name="_replyto" type="email" class="validate" required>
+                <label for="email">Email Address</label>
+              </div>
+
+              <div class="input-field">
+                <i class="material-icons prefix">mode_edit</i>
+                <textarea id="message" name="message" class="materialize-textarea" required></textarea>
+                <label for="message">Message</label>
+              </div>
+
+              <div class="center-align" style="margin-top: 30px;">
+                <button class="btn waves-effect waves-light blue-grey darken-3" type="submit">
+                  Submit <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =============================================================== -->
+  <!-- SPRINT 2 REQUIREMENT: Materialize Component - Floating Action Button -->
+  <!-- =============================================================== -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large blue-grey darken-3">
+      <i class="large material-icons">help_outline</i>
+    </a>
+    <ul>
+      <li><a href="faqs.html" class="btn-floating light-blue"><i class="material-icons">question_answer</i></a></li>
+      <li><a href="info.html" class="btn-floating teal"><i class="material-icons">info_outline</i></a></li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer blue-grey darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">AI in Sports</h5>
+          <p class="grey-text text-lighten-4">Exploring analytical tracking, vision tech, and automation in sports.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Pages</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="faqs.html">FAQs</a></li>
+            <li><a class="grey-text text-lighten-3" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center-align">
+        © 2026 IMS 222 Team Project
+      </div>
+    </div>
+  </footer>
+
+  <!-- Materialize JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize Mobile Menu
+      var sidenavs = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(sidenavs);
+
+      // Initialize Floating Action Button
+      var fabs = document.querySelectorAll('.fixed-action-btn');
+      M.FloatingActionButton.init(fabs);
+    });
+  </script>
+</body>
+</html>
