@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | AI in Sports</title>
+
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Compact SVG Framework Cards */
         .svg-tech-grid {
             display: grid;
@@ -118,10 +123,44 @@
         .linkedin-link:hover {
             color: var(--neon-green);
         }
+
+        /* Scroll to Top Button Styling */
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(10, 15, 30, 0.85);
+            border: 1px solid var(--neon-cyan, #00f0ff);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-to-top-btn:hover {
+            background: var(--neon-cyan, #00f0ff);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+            transform: translateY(-3px);
+        }
+
+        .scroll-to-top-btn svg {
+            stroke: var(--neon-cyan, #00f0ff);
+            transition: stroke 0.3s ease;
+        }
+
+        .scroll-to-top-btn:hover svg {
+            stroke: #050a14;
+        }
     </style>
 </head>
 
-<body>
+<body id="top">
 
     <!-- Cyber Grid Background Layer -->
     <div class="cyber-grid"></div>
@@ -136,7 +175,7 @@
             </svg>
             AI <span>IN SPORTS</span>
         </a>
-        <nav>
+        <nav aria-label="Main Navigation">
             <a href="index.html">Home</a>
             <a href="info.html">Information</a>
             <a href="faqs.html">FAQs</a>
@@ -156,7 +195,9 @@
             </div>
         </div>
     </section>
-       
+
+    <!-- Main Section -->
+    <main class="container">
         <!-- Site Playbook Section -->
         <h2 class="section-title" style="margin-top: 3.5rem;">The Playbook</h2>
         <div class="grid-3">
@@ -270,6 +311,13 @@
         </div>
 
     </main>
+
+    <!-- Scroll to Top Button -->
+    <a href="#top" class="scroll-to-top-btn" aria-label="Scroll to top">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </a>
 
     <footer>
         <p>&copy; 2026 AI in Sports Research Lab | Miami University, Oxford, OH</p>
