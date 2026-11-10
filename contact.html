@@ -1,134 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - AI in Sports</title>
-  <!-- Material Icons & Materialize CSS CDN -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- Jake's Shared Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact AI In Sports for innovative tech solutions in sports analytics and strategy.">
+    <title>Contact Us | AI In Sports</title>
+
+    <!-- Materialize CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Prevent Materialize global resets from overriding header and navigation styles */
+        nav,
+        header nav {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            height: auto !important;
+            line-height: normal !important;
+        }
+
+        header nav a {
+            line-height: normal !important;
+            height: auto !important;
+            padding: 0 !important;
+            color: inherit;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* Micro-Card Container Styling for Form Fields */
+        .field-card {
+            background: rgba(5, 10, 20, 0.65);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .field-card:focus-within {
+            border-color: var(--neon-cyan, #00f0ff);
+            box-shadow: 0 0 12px rgba(0, 240, 255, 0.25);
+            background: rgba(5, 10, 20, 0.85);
+        }
+
+        .field-card label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--cyan-glow, #00f0ff);
+            margin-bottom: 0.4rem;
+        }
+
+        .field-card input,
+        .field-card select,
+        .field-card textarea {
+            margin-bottom: 0;
+            background: rgba(0, 0, 0, 0.3) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 4px;
+            color: #ffffff;
+        }
+
+        /* Detail Cards for Office Info */
+        .detail-card {
+            background: rgba(5, 10, 20, 0.65);
+            border: 1px solid rgba(0, 240, 255, 0.2);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .detail-card:hover {
+            border-color: var(--neon-cyan, #00f0ff);
+            transform: translateY(-2px);
+        }
+
+        .detail-card h4 {
+            font-size: 0.85rem;
+            font-family: 'Orbitron', sans-serif;
+            color: var(--cyan-glow, #00f0ff);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .detail-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #e0e0e0;
+        }
+
+        /* Scroll to Top Button Styling */
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(10, 15, 30, 0.85);
+            border: 1px solid var(--neon-cyan, #00f0ff);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-to-top-btn:hover {
+            background: var(--neon-cyan, #00f0ff);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+            transform: translateY(-3px);
+        }
+
+        .scroll-to-top-btn svg {
+            stroke: var(--neon-cyan, #00f0ff);
+            transition: stroke 0.3s ease;
+        }
+
+        .scroll-to-top-btn:hover svg {
+            stroke: #050a14;
+        }
+    </style>
 </head>
-<body>
 
-  <!-- Navigation Bar -->
-  <header>
-    <nav class="blue-grey darken-4">
-      <div class="nav-wrapper container">
-        <a href="index.html" class="brand-logo">AI Sports</a>
-        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="info.html">Info</a></li>
-          <li><a href="faqs.html">FAQs</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li class="active"><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </nav>
-    <ul class="sidenav" id="mobile-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="info.html">Info</a></li>
-      <li><a href="faqs.html">FAQs</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li class="active"><a href="contact.html">Contact Us</a></li>
-    </ul>
-  </header>
+<body id="top">
 
-  <!-- Main Content: Contact Form -->
-  <main class="container" style="margin-top: 40px; margin-bottom: 60px;">
-    <div class="row">
-      <div class="col s12 m8 offset-m2">
-        <div class="card z-depth-2">
-          <div class="card-content">
-            <span class="card-title center-align">Get in Touch</span>
-            <p class="center-align grey-text text-darken-1" style="margin-bottom: 25px;">
-              Have questions or feedback about AI in modern sports? Send us a message below.
-            </p>
+    <!-- Cyber Grid Background Layer -->
+    <div class="cyber-grid"></div>
 
-            <!-- Formspree Submission Form -->
-            <form action="https://formspree.io/f/xoeelbae" method="POST">
-              <div class="input-field">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="name" name="name" type="text" class="validate" required>
-                <label for="name">Your Name</label>
-              </div>
+    <!-- Header Navigation -->
+    <header>
+        <a href="index.html" class="brand-logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="var(--neon-cyan)" stroke-width="1.5" />
+                <path d="M12 2v20M2 12h20" stroke="rgba(0, 240, 255, 0.3)" stroke-width="1" />
+                <polygon points="13,3 7,13 12,13 11,21 17,11 12,11" fill="var(--neon-green)" />
+            </svg>
+            AI <span>IN SPORTS</span>
+        </a>
+        <nav aria-label="Main Navigation">
+            <a href="index.html">Home</a>
+            <a href="info.html">Information</a>
+            <a href="faqs.html">FAQs</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
 
-              <div class="input-field">
-                <i class="material-icons prefix">email</i>
-                <input id="email" name="_replyto" type="email" class="validate" required>
-                <label for="email">Email Address</label>
-              </div>
-
-              <div class="input-field">
-                <i class="material-icons prefix">mode_edit</i>
-                <textarea id="message" name="message" class="materialize-textarea" required></textarea>
-                <label for="message">Message</label>
-              </div>
-
-              <div class="center-align" style="margin-top: 30px;">
-                <button class="btn waves-effect waves-light blue-grey darken-3" type="submit">
-                  Submit <i class="material-icons right">send</i>
-                </button>
-              </div>
-            </form>
-          </div>
+    <!-- Page Banner Hero Card -->
+    <section class="container" style="padding-bottom: 0;">
+        <div class="glass-card hero-container glow-cyan" style="text-align: center;">
+            <h1>Get in Touch</h1>
+            <p style="color: var(--text-muted); max-width: 650px; margin: 0 auto;">Have questions about AI in sports? Send telemetry or submit general inquiries to our research lab team.</p>
         </div>
-      </div>
-    </div>
-  </main>
+    </section>
 
-  <!-- =============================================================== -->
-  <!-- SPRINT 2 REQUIREMENT: Materialize Component - Floating Action Button -->
-  <!-- =============================================================== -->
-  <div class="fixed-action-btn">
-    <a class="btn-floating btn-large blue-grey darken-3">
-      <i class="large material-icons">help_outline</i>
+    <!-- Main Content: Form & Map -->
+    <main class="container">
+        <div class="grid-2">
+
+            <!-- Contact Form Main Card -->
+            <div class="hud-card glow-cyan">
+                <h2 style="color: var(--cyan-glow); margin-bottom: 0.5rem;">Send Us a Message</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.75rem;">Fill out the form below and our team will get back to you shortly.</p>
+
+                <!-- FormSubmit Integration -->
+                <form action="https://formspree.io/f/xwlvownl" method="POST" class="hud-form">
+
+                    <!-- Hidden FormSubmit Configuration options -->
+                    <input type="hidden" name="_subject" value="New Inquiry - AI In Sports Website">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <!-- Field Card 1: Full Name -->
+                    <div class="field-card">
+                        <label for="name">Full Name <span style="color: var(--cyan-glow);">*</span></label>
+                        <input type="text" id="name" name="name" placeholder="e.g., Alex Johnson" required>
+                    </div>
+
+                    <!-- Field Card 2: Email Address -->
+                    <div class="field-card">
+                        <label for="email">Email Address <span style="color: var(--cyan-glow);">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="e.g., alex@example.com" required>
+                    </div>
+
+                    <!-- Field Card 3: Area of Interest -->
+                    <div class="field-card">
+                        <label for="interest">Area of Interest</label>
+                        <select id="interest" name="interest">
+                            <option value="Artificial Intelligence">Artificial Intelligence / GenAI</option>
+                            <option value="Sports Analytics">Sports Analytics & Data</option>
+                            <option value="Performance Tech">Performance & Athlete Tech</option>
+                            <option value="General Inquiry">General Tech Strategy</option>
+                        </select>
+                    </div>
+
+                    <!-- Field Card 4: Message -->
+                    <div class="field-card">
+                        <label for="message">Your Message <span style="color: var(--cyan-glow);">*</span></label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project or inquiry..." required></textarea>
+                    </div>
+
+                    <!-- Submit Button Card -->
+                    <button type="submit" class="btn-hud waves-effect waves-light" style="width: 100%; margin-top: 0.5rem;">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Information & Map Section -->
+            <div>
+                <!-- Office Details Outer Card -->
+                <div class="hud-card glow-purple" style="margin-bottom: 1.5rem;">
+                    <h3 style="color: var(--neon-purple); margin-bottom: 1.25rem;">Office Details</h3>
+
+                    <!-- Mini Card 1: Address -->
+                    <div class="detail-card">
+                        <h4>Location</h4>
+                        <p>High St & Campus Ave, Oxford, OH 45056</p>
+                    </div>
+
+                    <!-- Mini Card 2: Email -->
+                    <div class="detail-card">
+                        <h4>Direct Email</h4>
+                        <p>contact@aiinsports.com</p>
+                    </div>
+
+                    <!-- Mini Card 3: Operating Hours -->
+                    <div class="detail-card">
+                        <h4>Research Hours</h4>
+                        <p>Mon – Fri, 9:00 AM – 5:00 PM EST</p>
+                    </div>
+                </div>
+
+                <!-- Google Map Embed Card -->
+                <div class="hud-card glow-cyan" style="padding: 0.75rem;">
+                    <iframe title="Office Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12351.455486580665!2d-84.74312643593368!3d39.50868777717462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88402773418e2fe7%3A0xe67db5cfb1a8d052!2sMiami%20University!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="300" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <a href="#top" class="scroll-to-top-btn" aria-label="Scroll to top">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
     </a>
-    <ul>
-      <li><a href="faqs.html" class="btn-floating light-blue"><i class="material-icons">question_answer</i></a></li>
-      <li><a href="info.html" class="btn-floating teal"><i class="material-icons">info_outline</i></a></li>
-    </ul>
-  </div>
 
-  <!-- Footer -->
-  <footer class="page-footer blue-grey darken-4">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">AI in Sports</h5>
-          <p class="grey-text text-lighten-4">Exploring analytical tracking, vision tech, and automation in sports.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Pages</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
-            <li><a class="grey-text text-lighten-3" href="faqs.html">FAQs</a></li>
-            <li><a class="grey-text text-lighten-3" href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container center-align">
-        © 2026 IMS 222 Team Project
-      </div>
-    </div>
-  </footer>
+    <!-- Universal Footer -->
+    <footer>
+        <p>&copy; 2026 AI in Sports Research Lab | Miami University, Oxford, OH</p>
+    </footer>
 
-  <!-- Materialize JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Initialize Mobile Menu
-      var sidenavs = document.querySelectorAll('.sidenav');
-      M.Sidenav.init(sidenavs);
+    <!-- Materialize JavaScript CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-      // Initialize Floating Action Button
-      var fabs = document.querySelectorAll('.fixed-action-btn');
-      M.FloatingActionButton.init(fabs);
-    });
-  </script>
+    <!-- Materialize Toast Component Trigger on Form Submit -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.querySelector('.hud-form');
+            if (form) {
+                form.addEventListener('submit', function() {
+                    M.toast({ html: 'Transmitting message to research lab...', displayLength: 4000 });
+                });
+            }
+        });
+    </script>
+
 </body>
+
 </html>
