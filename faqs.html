@@ -2,28 +2,45 @@
 <html lang="en">
 
 <head>
-<!-- Added -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<script js>src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.</script>
- <!-- Added -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI in Sports — Frequently Asked Questions</title>
+  <title>FAQs | AI in Sports</title>
+
+  <!-- Materialize CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Added -->
-     <script>
-      $(document).ready(function(){
-     $('.slider').slider();
-$('.slider').slider({indicators: false, height: 500,interval: 2000});
-    </script>
-    <!-- Added -->
-   <style>
+
+  <style>
     /* Smooth Scrolling & Sticky Header Offset */
     html {
       scroll-behavior: smooth;
+    }
+
+    /* Prevent Materialize global resets from overriding header and navigation styles */
+    nav,
+    header nav,
+    .category-nav {
+      background-color: transparent !important;
+      box-shadow: none !important;
+      height: auto !important;
+      line-height: normal !important;
+    }
+
+    header nav a,
+    .category-nav a {
+      line-height: normal !important;
+      height: auto !important;
+      padding: 0 !important;
+      color: inherit;
+    }
+
+    a {
+      color: inherit;
     }
 
     /* Prevents sticky headers from covering target titles */
@@ -147,11 +164,45 @@ $('.slider').slider({indicators: false, height: 500,interval: 2000});
       gap: 1rem;
     }
 
+    /* Scroll to Top Button Styling */
+    .scroll-to-top-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(10, 15, 30, 0.85);
+      border: 1px solid var(--neon-cyan, #00f0ff);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .scroll-to-top-btn:hover {
+      background: var(--neon-cyan, #00f0ff);
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+      transform: translateY(-3px);
+    }
+
+    .scroll-to-top-btn svg {
+      stroke: var(--neon-cyan, #00f0ff);
+      transition: stroke 0.3s ease;
+    }
+
+    .scroll-to-top-btn:hover svg {
+      stroke: #050a14;
+    }
+
     @media (max-width: 650px) {
       .inquiry-form-grid {
         grid-template-columns: 1fr;
       }
-      
+
       .img-fluid-small,
       .img-fluid-medium {
         max-width: 100%;
@@ -163,7 +214,10 @@ $('.slider').slider({indicators: false, height: 500,interval: 2000});
 
 <body id="top">
 
-  <!-- Universal Header Navigation -->
+  <!-- Cyber Grid Background Layer -->
+  <div class="cyber-grid"></div>
+
+  <!-- Header Navigation -->
   <header>
     <a href="index.html" class="brand-logo">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -173,26 +227,18 @@ $('.slider').slider({indicators: false, height: 500,interval: 2000});
       </svg>
       AI <span>IN SPORTS</span>
     </a>
-    <nav style="background-color: rgb(10, 16, 32);" aria-label="Main Navigation">
-    <!-- Added -->
-     <div class="nav-wrapper transparent">
-<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
-class="material-icons">menu</i></a>
-<ul class="right hide-on-med-and-down">
-      <li><a href="index.html">Home</a></li>
-     <li><a href="info.html">Information</a></li>
-      <li><a href="faqs.html" class="active">FAQs</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-         </ul>
-        </div>
-        <!-- Added -->
+    <nav aria-label="Main Navigation">
+      <a href="index.html">Home</a>
+      <a href="info.html">Information</a>
+      <a href="faqs.html" class="active">FAQs</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <!-- Sticky Category Jump Navigation -->
   <div class="sticky-wrapper">
-    <nav style="background-color: rgb(10, 16, 32);" class="category-nav">
+    <nav class="category-nav">
       <a href="#officiating">Officiating & VAR</a>
       <a href="#tennis">Tennis Hawkeye</a>
       <a href="#history">AI History</a>
@@ -201,13 +247,7 @@ class="material-icons">menu</i></a>
       <a href="#ask-question">Ask a Question</a>
     </nav>
   </div>
-<!-- Added -->
- <div class="fixed-action-btn">
-  <a class="btn-floating btn-large" href="#top">
-    <i class="large material-icons">Top</i>
-  </a>
-</div> 
- <!-- Added -->
+
   <!-- Hero Banner -->
   <section class="container" style="padding-bottom: 0;">
     <div class="glass-card hero-container glow-cyan">
@@ -408,6 +448,14 @@ class="material-icons">menu</i></a>
     </section>
 
   </main>
+
+  <!-- Scroll to Top Button -->
+  <a href="#top" class="scroll-to-top-btn" aria-label="Scroll to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </a>
+
   <!-- Script to Auto-Expand Accordions When Jump Links Are Clicked -->
   <script>
     function openTargetAccordion() {
@@ -422,53 +470,11 @@ class="material-icons">menu</i></a>
     window.addEventListener('hashchange', openTargetAccordion);
     window.addEventListener('DOMContentLoaded', openTargetAccordion);
   </script>
-<footer style="background-color: rgb(10, 16, 32);" class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">AI in Sports</h5>
-                <p class="grey-text text-lighten-4">Access our other pages here.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <!-- Added -->
-        <table>
-        <thead>
-          <tr>
-              <th>Page</th>
-              <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Home</td>
-            <td><a class="grey-text text-lighten-3" href="index.html">Click here</a></td>
-          </tr>
-          <tr>
-            <td>Information</td>
-            <td><a class="grey-text text-lighten-3" href="info.html">Click here</a></td>
-          </tr>
-          <tr>
-            <td>About Us</td>
-            <td><a class="grey-text text-lighten-3" href="about.html">Click here</a></td>
-          </tr>
-          <tr>
-              <td>Contact Us</td>
-              <td><a class="grey-text text-lighten-3" href="contact.html">Click here</a></td>
-          </tr>
-        </tbody>
-      </table>
-             <!-- Added -->
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2026 AI in Sports
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
+
+  <!-- Universal Footer -->
+  <footer>
+    <p>&copy; 2026 AI in Sports Research Lab | Miami University, Oxford, OH</p>
+  </footer>
 
 </body>
 
